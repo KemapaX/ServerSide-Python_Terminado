@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Book Form</h1>
+    <p>Enter the information:</p>
+        <br>
+            <form action="/document_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_title">Title</span>
+                    <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup_title">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_author">Author</span>
+                    <input type="text" class="form-control" name="author" aria-label="Sizing example input" aria-describedby="inputGroup_author">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_last_author">Last author</span>
+                    <input type="text" class="form-control" name="last_author" aria-label="Sizing example input" aria-describedby="inputGroup_last_author">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_theme">Theme</span>
+                    <input type="text" class="form-control" name="theme" aria-label="Sizing example input" aria-describedby="inputGroup_theme">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_leaves">Number of sheets</span>
+                    <input type="text" class="form-control" name="leaves" aria-label="Sizing example input" aria-describedby="inputGroup_leaves">
+                </div>
+
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}
